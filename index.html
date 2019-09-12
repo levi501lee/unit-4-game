@@ -2,43 +2,98 @@
 <html lang="en-us">
 
 <head>
-  <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shiny Stone Stealing</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+
+  <title>Shiny Stone Stealing</title>
 </head>
 
 <body>
-<h1>Shiny Stone Stealing Game</h1>
-
-Listen my young talib, this is a smash and grab. Check your pocket lint
-dollars below because you need to get Alfonso his green. 
-Except you aint got much green, but you got a guy that sells loose stones on
-the street corner. Time to start snatching! 
-
-Problem is, you don't know how much each stone is worth until you lift it!
-Luckily for you, each specific stone is the same price once you do know it.
-
-Each game the price will be different!
- The amount of money you start with will be different
- The amount you owe Alfonso will be different
-
- Not get to it and steal those shiny stones!
-
- <div id="empty-div"></div>
 
 
- <h1>This is your money to include ill-gotten gains <span id="pocket-money"></span></h1>
+  <!-- game section -->
+  <div class="row" id="gameSection">
 
- <h1>You owe the Taliban this much <span id="number-to-guess"></span></h1>
- 
- <div id="crystals">
+    <div class="col-md-8">
+      <h1>Shiny Stone Stealing Game</h1>
+      Listen my young talib, this is a smash and grab. Check your pocket lint
+      dollars below because you need to get Alfonso his green.
+      Except you aint got much green, but you got a guy that sells loose stones on
+      the street corner. Time to start snatching!
+
+      Problem is, you don't know how much each stone is worth until you lift it!
+      Luckily for you, each specific stone is the same price once you do know it.
+
+      Each game the price will be different!
+      The amount of money you start with will be different
+      The amount you owe Alfonso will be different
+
+      Not get to it and steal those shiny stones!
+    </div>
+  </div>
+  <div class="row" id="gameSection">
+    <!-- first column for numbers and scores -->
+    <div class="col-md-3" id="numberSection">
+
+
+      <h1 class="text-center">This is your money to include ill-gotten gains:</h1>
+      <h1 class="numberBox text-center" id="pocket-money">0</h1>
+
+      <h1 class="text-center">You owe the Taliban this much: </h1>
+      <h1 class="numberBox text-center" id="target-number">0</h1>
+
+
+      <h3 class="text-center" id="wins">Wins: 0</h3>
+
+      <h3 class="text-center" id="losses">Losses: 0</h3>
     </div>
 
- <script src="assets/javascript/game.js"></script>
+
+    <!-- second column for buttons -->
+    <div class="col-md-6 text-center" id="buttonSection">
+
+      <!-- first crystal -->
+      <button id="button-1" value="0"><img src="assets/images/crystal1.jpg" class="crystal-image" id="icon1"></button>
+
+      <!-- second crystal -->
+      <button id="button-2" value="0"><img src="assets/images/crystal2.jpg" class="crystal-image" id="icon2"></button>
+
+      <!-- third crystal -->
+      <button id="button-3" value="0"><img src="assets/images/crystal3.jpg" class="crystal-image" id="icon3"></button>
+
+      <!-- fourth crystal -->
+      <button id="button-4" value="0"><img src="assets/images/crystal4.jpg" class="crystal-image" id="icon4"></button>
+
+    </div>
+
+    <!-- third column for imagery of the jewelry and the win/loss/image -->
+    <div class="col-md-3" id="totalPoints">
+
+    </div>
+
+  </div>
+
+  <!-- footer section if needed -->
+  <div class="row">
+
+    <!-- spacer column -->
+    <div class="col-md-4"></div>
+
+    <!-- spacer column -->
+    <div class="col-md-4"></div>
+
+  </div>
+
+
+  </div>
+
+  <script src="assets/javascript/game.js"></script>
 
 </body>
 
